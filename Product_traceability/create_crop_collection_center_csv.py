@@ -1,0 +1,32 @@
+import csv
+import os
+
+# Ensure the directory exists
+output_dir = r"D:\Dream71Project\Product_traceability"
+os.makedirs(output_dir, exist_ok=True)
+
+# Data for Crop Collection Center Create Form attributes
+data = [
+    ["S. No", "Attribute Name", "Mandatory", "Component", "Notes"],
+    [1, "Collection Center Name", "Yes", "Text", "English name of the collection center."],
+    [2, "Collection Center Name Bangla", "Yes", "Text", "Bangla name of the collection center."],
+    [3, "Owner’s Name", "Yes", "Dropdown", "Select from a list of registered owners."],
+    [4, "Date of Establishment", "Yes", "Date", "Date the collection center was established, format: DD-MM-YYYY."],
+    [5, "Manpower Involved", "No", "Text/Number", "Number or description of personnel involved in operations; optional as not marked with an asterisk."],
+    [6, "Latitude", "Yes", "Text/Number", "Geographic latitude of the collection center (e.g., decimal degrees)."],
+    [7, "Longitude", "Yes", "Text/Number", "Geographic longitude of the collection center (e.g., decimal degrees)."],
+    [8, "Division", "Yes", "Dropdown", "Select from administrative divisions (e.g., Dhaka, Chittagong)."],
+    [9, "District", "Yes", "Dropdown", "Select from districts within the chosen division."],
+    [10, "Upazila", "Yes", "Dropdown", "Select from upazilas within the chosen district."],
+    [11, "Union", "Yes", "Dropdown", "Select from unions within the chosen upazila."],
+    [12, "Trade License Image", "No", "File Upload", "Image of trade license, max size not specified, assume standard formats (e.g., PNG, JPG); optional as not marked with an asterisk."],
+    [13, "Photo of the Arot or Depot", "No", "File Upload", "Image of the collection center or depot, max size not specified, assume standard formats (e.g., PNG, JPG); optional as not marked with an asterisk."]
+]
+
+# Write to CSV file at specified path
+output_path = os.path.join(output_dir, "crop_collection_center_form.csv")
+with open(output_path, "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+print(f"CSV file 'crop_collection_center_form.csv' has been created successfully at {output_path}.")
