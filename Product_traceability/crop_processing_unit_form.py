@@ -1,0 +1,47 @@
+import csv
+import os
+
+# Ensure the directory exists
+output_dir = r"D:\Dream71Project\Product_traceability"
+os.makedirs(output_dir, exist_ok=True)
+
+# Data for Crop Processing Unit Create Form attributes
+data = [
+    ["S. No", "Attribute Name", "Mandatory", "Component", "Notes"],
+    [1, "Processing Unit Name", "Yes", "Text", "English name of the processing unit."],
+    [2, "Processing Unit Name Bangla", "Yes", "Text", "Bangla name of the processing unit."],
+    [3, "Owner’s Name", "Yes", "Dropdown", "Select from a list of registered owners."],
+    [4, "Date of Establishment", "Yes", "Date", "Date the processing unit was established, format: DD-MM-YYYY."],
+    [5, "Manpower Involved", "Yes", "Text/Number", "Number or description of personnel involved in operations."],
+    [6, "Mobile", "Yes", "Text", "Mobile number, including country code."],
+    [7, "Latitude", "Yes", "Text/Number", "Geographic latitude of the processing unit (e.g., decimal degrees)."],
+    [8, "Longitude", "Yes", "Text/Number", "Geographic longitude of the processing unit (e.g., decimal degrees)."],
+    [9, "Division", "No", "Dropdown", "Select from administrative divisions (e.g., Dhaka, Chittagong); optional as not marked with an asterisk."],
+    [10, "District", "No", "Dropdown", "Select from districts within the chosen division; optional as not marked with an asterisk."],
+    [11, "Upazila", "No", "Dropdown", "Select from upazilas within the chosen district; optional as not marked with an asterisk."],
+    [12, "Union", "No", "Dropdown", "Select from unions within the chosen upazila; optional as not marked with an asterisk."],
+    [13, "Separate Processing Unit", "No", "Dropdown", "Options include 'No'; likely a Yes/No or list selection for separate facility status."],
+    [14, "Hygiene And Sanitation", "No", "Checkbox", "Options: Dressing Room, Foot Bath, Basin for hand sanitization, Separate Dress, Head Cap, Face Mask, Separate shoes for work zone, The toilet is outside of the processing zone, Adequate drainage facilities."],
+    [15, "Safety Issue", "No", "Checkbox", "Options: Fire Dehydrants, Emergency Exit, First Aid."],
+    [16, "Water Source", "No", "Checkbox", "Options: Clean groundwater used for cleaning the processing zone, Potable water (Reverse osmosis) used for washing processed crop, Clean groundwater used for washing processed crop, Potable water (Reverse osmosis) used for washing utensils, Clean groundwater used for washing utensils."],
+    [17, "Fresh Agro Commodities Handlings", "No", "Checkbox", "Options: Dried, Semi Dried, Loose pack during transportation, Used pack during transportation, Used plastic crate for transportation."],
+    [18, "Grading Tables", "No", "Checkbox", "Options: Stainless steel, Tin, Wood."],
+    [19, "Commodity Washing", "No", "Checkbox", "Options: Aluminium pot, Plastic bucket/crate, Stainless steel tank, Stainless steel sink, Plastic basket for dewatering."],
+    [20, "Water Supply And Uses", "No", "Dropdown/Checkbox", "Options: Ground water supply system, River water, Cannel water, Tube well water, None."],
+    [21, "Packaging", "No", "Checkbox", "Options: Vacuum Package, Modified Atmosphere Packaging, Food-grade package (LDPE 4), Unknown Packaging Materials."],
+    [22, "Transportation", "No", "Checkbox", "Options: Van, Truck, Plastic Crate."],
+    [23, "Preservatives And Additives", "No", "Checkbox", "Options: No added preservatives, No preservatives, No chemicals, Used food-grade hormone, Used edible spices and oils, Salt (sodium chloride), Testing salt (monosodium glutamate)."],
+    [24, "Certification", "No", "Checkbox", "Options: No added preservatives, HACCP, GMP, BGAP (Islamic Foundation), GGAP, ISO, BSTI."],
+    [25, "Social and Environmental Issues", "No", "Checkbox", "Options: Solid waste managed properly, Liquid waste treatment system, ETP, No objection from the local government, No child labour."],
+    [26, "Image of Processing Unit", "Yes", "File Upload", "Image of the processing unit, max size not specified, assume standard formats (e.g., PNG, JPG)."],
+    [27, "Environmental License Image", "No", "File Upload", "Image of environmental license, max size not specified, assume standard formats (e.g., PNG, JPG); optional as not marked with an asterisk."],
+    [28, "Trade License Image", "No", "File Upload", "Image of trade license, max size not specified, assume standard formats (e.g., PNG, JPG); optional as not marked with an asterisk."]
+]
+
+# Write to CSV file at specified path
+output_path = os.path.join(output_dir, "crop_processing_unit_form.csv")
+with open(output_path, "w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+print(f"CSV file 'crop_processing_unit_form.csv' has been created successfully at {output_path}.")
