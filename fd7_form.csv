@@ -1,0 +1,27 @@
+S. No,Attribute Name,Mandatory,Component,Notes
+1,"NGO Name, Address, Registration Number, and Date",Yes,Text,"Full name, address, registration number, and registration date (format: DD-MM-YYYY)."
+2,Proposed Project Name,Yes,Text,Name of the proposed relief project.
+3,Proposed Project Type,Yes,Dropdown,"Select from options (e.g., rural, health)."
+4,Details of Proposed Relief Materials,Yes,Table/Text,"Includes: Serial No., Type, District, Upazila, Item Description, Quantity, Unit Price, Total Amount, Total Beneficiaries, Remarks."
+5,Donor Agency Commitment Letter,Yes,File Upload,"Maximum 500 KB, proof of donor commitment."
+6,Donor Agency Details,Yes,Text,Description of the donor agency.
+7,Donor’s Chief Executive Name,Yes,Text,Full name of the donor’s chief executive.
+8,Donor Agency Name,Yes,Text,Full name of the donor agency.
+9,Donor Contact Address,Yes,Text,Full contact address of the donor agency.
+10,Donor Telephone,Yes,Text,"Telephone number, including country/area code."
+11,Donor Email and Website,Yes,Text,Email and website URL; enter 'N/A' if no website.
+12,Ongoing Project Name and Total Cost,Yes,Text,Name and total cost of the ongoing project funding the proposed activity.
+13,Bureau Approval Date,Yes,Date/File Upload,Approval date (DD-MM-YYYY); attach approval letter (max 500 KB).
+14,Percentage of Main Project Budget Used,Yes,Text/Number,Percentage of ongoing project budget allocated to this relief activity.
+15,Impact on Ongoing Project,Yes,Text,"Whether the relief activity will adversely affect the ongoing project (e.g., Yes/No or description)."
+16,Donor Commitment Letter for Ongoing Project,Yes,File Upload,"Maximum 500 KB, copy of donor commitment for ongoing project."
+17,Project Area,Yes,Table/Text,"Includes: Division, District/City Corporation, Upazila/Thana/Municipality/Ward, Project Type, Allocated Budget, Total Beneficiaries. Note: District Administration/Upazila Executive Officer may change project area for coordination."
+18,Implementation Plan Description,Yes,Text/File Upload,"Detailed plan for relief activity implementation; must facilitate monitoring (at least one input field required, max 500 KB for file)."
+19,Project Start Date,Yes,Date,"Start date of the project, format: DD-MM-YYYY."
+20,Project End Date,Yes,Date,"End date of the project, format: DD-MM-YYYY."
+21,Other Relevant Information,Yes,Text/File Upload,"Additional details, including future plans (at least one input field required, max 500 KB for file)."
+22,Bank Details for Foreign Donation,Yes,Text/File Upload,"Bank information for receiving foreign donations (at least one input field required, max 500 KB for file)."
+23,Head of the Organization Name,Yes,Text,Full name of the organization’s chief executive.
+24,Head of the Organization Title,Yes,Text,"Designation, e.g., Director, Project Manager."
+25,Digital Signature,Yes,File Upload,"PNG format, 300x80 pixels, max 60 KB."
+26,Digital Seal,Yes,File Upload,"PNG format, 300x100 pixels, max 80 KB."
